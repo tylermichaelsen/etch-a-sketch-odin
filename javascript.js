@@ -10,6 +10,12 @@ for(let i = 0; i < 15; i++) {
         pixelGrid[i][j].classList.add('pixel')
 
         pixelGrid[i][j].textContent = "yo";
+
+        const pixels = document.querySelectorAll('.pixel');
+
+        pixelGrid[i][j].addEventListener("mouseover", (event) => {
+            event.target.style.backgroundColor = "black";
+        });
         
         gridContainer.appendChild(columns[i]);
         columns[i].appendChild(pixelGrid[i][j]);
