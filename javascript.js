@@ -23,8 +23,6 @@ for(let i = 0; i < gridSize; i++) {
 
         pixelGrid[i][j].textContent = "yo";
 
-        const pixels = document.querySelectorAll('.pixel');
-
         pixelGrid[i][j].addEventListener('mouseover', (event) => {
             event.target.style.backgroundColor = 'black';
         });
