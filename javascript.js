@@ -1,3 +1,5 @@
+const body = document.querySelector('body');
+
 const pixelGrid = [...Array(16)].map(e => Array(16));
 const columns = [];
 const gridContainer = document.querySelector('.grid-container');
