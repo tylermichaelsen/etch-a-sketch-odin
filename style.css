@@ -1,5 +1,7 @@
 .grid-container {
     display: flex;
+    height: 960px;
+    width: 960px;
 }
 
 .col {
