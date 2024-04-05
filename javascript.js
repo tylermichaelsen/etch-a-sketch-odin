@@ -1,4 +1,5 @@
 const pixelGrid = [...Array(16)].map(e => Array(16));
+const pixel = document.createElement('div');
 const gridContainer = document.querySelector('.grid-container');
 
 for(let i = 0; i < 15; i++) {
