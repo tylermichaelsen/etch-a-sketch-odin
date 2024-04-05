@@ -10,6 +10,8 @@ for(let i = 0; i < 15; i++) {
         pixelGrid[i][j] = document.createElement('div');
         pixelGrid[i][j].classList.add('pixel')
 
+        pixelGrid[i][j].textContent = "yo";
+
         gridContainer.appendChild(pixelGrid[i][j]);
     }
 }
