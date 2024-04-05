@@ -4,8 +4,12 @@ const pixelGrid = [...Array(16)].map(e => Array(16));
 const columns = [];
 const gridContainer = document.querySelector('.grid-container');
 
-const newBtn = document.createElement('button');
-newBtn.textContent = 'New'
+const newBtn = document.querySelector('.reset');
+
+newBtn.addEventListener('click', (event) => {
+    prompt('Please enter a single number for new grid size (n*n)');
+})
+
 
 for(let i = 0; i < 15; i++) {
     columns[i] = document.createElement('div')
@@ -27,4 +31,3 @@ for(let i = 0; i < 15; i++) {
     }
 }
 
-body.appendChild(newBtn);
