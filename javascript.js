@@ -3,15 +3,15 @@ const columns = [];
 const gridContainer = document.querySelector('.grid-container');
 
 for(let i = 0; i < 15; i++) {
+    columns[i] = document.createElement('div')
+    columns[i].classList.add('col')
     for(let j = 0; j < 15; j++) {
-        columns[j] = document.createElement('div')
-        columns[j].classList.add('col')
-
         pixelGrid[i][j] = document.createElement('div');
         pixelGrid[i][j].classList.add('pixel')
 
         pixelGrid[i][j].textContent = "yo";
-
-        gridContainer.appendChild(pixelGrid[i][j]);
+        
+        gridContainer.appendChild(columns[i]);
+        columns[i].appendChild(pixelGrid[i][j]);
     }
 }
