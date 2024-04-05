@@ -26,3 +26,5 @@ for(let i = 0; i < 15; i++) {
         columns[i].appendChild(pixelGrid[i][j]);
     }
 }
+
+body.appendChild(newBtn);
