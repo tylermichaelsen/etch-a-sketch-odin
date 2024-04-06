@@ -17,11 +17,11 @@ for(let i = 0; i < gridSize; i++) {
 const newBtn = document.querySelector('.reset');
 
 newBtn.addEventListener('click', (event) => {
-    drawSketchPad(+prompt('Please enter a single number for new grid size (n*n)'));
+    
+    drawSketchPad(+prompt('Please enter a number lower than 100'));
     for(let i = 0; i < gridSize; i++ ) {
         for(let j = 0; j < gridSize; j++) {
             pixelGrid[i][j].style.backgroundColor = 'white';
-            
         }
     }
     hasReset = true;
