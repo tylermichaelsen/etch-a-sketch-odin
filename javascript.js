@@ -15,7 +15,8 @@ for(let i = 0; i < gridSize; i++) {
 const newBtn = document.querySelector('button');
 
 newBtn.addEventListener('click', () => {
-    gridSize = +prompt("Please enter a number");
+    drawGrid(+prompt("Please enter a number"));
+    pixelGrid.replaceChildren();
 });
 
 function drawGrid(size) {
@@ -38,4 +39,10 @@ function drawGrid(size) {
     }
 }
 
-drawGrid(gridSize);
+function clearGrid(size) {
+    for(let i = 0; i < size; i++) {
+        for(let j = 0; j < size; j++) {
+            pixelGrid[i][j].style.backgroundColor = 'white';
+        }
+    }
+}
