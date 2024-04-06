@@ -12,6 +12,12 @@ for(let i = 0; i < gridSize; i++) {
     }
 }
 
+const newBtn = document.querySelector('button');
+
+newBtn.addEventListener('click', () => {
+    gridSize = +prompt("Please enter a number");
+});
+
 function drawGrid(size) {
     for(let i = 0; i < size; i++) {
         const columns = [];
