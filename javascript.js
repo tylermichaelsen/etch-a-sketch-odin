@@ -19,6 +19,13 @@ function drawGrid(size) {
         columns[i].classList.add('col');
         for(let j = 0; j < size; j++) {
             pixelGrid[i][j] = document.createElement('div');
+            pixelGrid[i][j].classList.add('pixel');
+
+            pixelGrid[i][j].addEventListener('mouseover', (event) => {
+                event.target.style.backgroundColor = 'black';
+            });
+
+            pixelGrid[i][j].textContent = ' ';
             gridContainer.appendChild(columns[i]);
             columns[i].appendChild(pixelGrid[i][j]);
         }
