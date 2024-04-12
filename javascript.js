@@ -15,8 +15,11 @@ for(let i = 0; i < gridSize; i++) {
 const newBtn = document.querySelector('button');
 
 newBtn.addEventListener('click', () => {
+    while(gridContainer.firstChild) {
+        gridContainer.removeChild(gridContainer.lastChild);
+    }
     drawGrid(+prompt("Please enter a number"));
-    pixelGrid.replaceChildren();
+    
 });
 
 function drawGrid(size) {
